@@ -11,7 +11,7 @@ Fixed SillyTavern Chub Search is a FIX for the SillyTavern Search Chub Search Ex
 
 # About the fork
 
-This fork contains a fixed version of the plugin with the fixed domain as it uses an old one, which causes an error.
+This fork contains a fixed version of the plugin with the fixed domain as it uses an old one, which causes an error, along with some quality of life extra features.
 
 ## Installation and Usage
 
