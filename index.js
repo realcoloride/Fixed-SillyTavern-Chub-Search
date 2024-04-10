@@ -267,6 +267,10 @@ function generateCharacterListItem(character, index) {
     `;
 }
 
+// good ol' clamping
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+}
 
 /**
  * Displays a popup for character listings based on certain criteria. The popup provides a UI for 
@@ -466,15 +470,17 @@ async function displayCharactersInListViewPopup() {
     document.getElementById('pageUpButton').addEventListener('click', function (e) {
         let pageNumber = document.getElementById('pageNumber'); 
 
-        pageNumber.value = parseInt(pageNumber.value) + 1;
-        pageNumber.value = Math.max(1, pageNumber.value);
+        pageNumber.value = clamp(parseInt(pageNumber.value) + 1, 0, Number.MAX_SAFE_INTEGER);
+        //pageNumber.value = Math.max(1, pageNumber.value);
+        
         handleSearch(e);
     }
     );
     document.getElementById('pageDownButton').addEventListener('click', function (e) {
         let pageNumber = document.getElementById('pageNumber');
-        pageNumber.value = parseInt(pageNumber.value) - 1;
-        pageNumber.value = Math.max(1, pageNumber.value);
+        pageNumber.value = clamp(parseInt(pageNumber.value) - 1, 0, Number.MAX_SAFE_INTEGER);
+        //pageNumber.value = Math.max(1, pageNumber.value);
+        
         handleSearch(e);
     }
     );
