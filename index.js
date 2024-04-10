@@ -441,7 +441,7 @@ async function displayCharactersInListViewPopup() {
         let page = document.getElementById('pageNumber').value;
 
         // If the page number is not being changed, use page 1
-        if (e.target.id !== 'pageNumber' && e.target.id !== 'pageUpButton' && e.target.id !== 'pageDownButton') {
+        if (e.target.id !== 'pageNumber' && e.target.id !== 'pageUpButton' && e.target.id !== 'pageDownButton' && e.target !== "fas fa-chevron-left" && e.target !== "fas fa-chevron-right") {
             page = 1;
             // set page box to 1
             document.getElementById('pageNumber').value = 1;
@@ -473,11 +473,9 @@ async function displayCharactersInListViewPopup() {
     document.getElementById('pageUpButton').addEventListener('click', function (e) {
         let pageNumber = document.getElementById('pageNumber'); 
 
-        console.log(pageNumber.value + "BEFORE")
         pageNumber.value = parseInt(pageNumber.value) + 1;
         pageNumber.value = Math.max(1, pageNumber.value);
-        console.log(pageNumber.value + "AFTER")
-        console.log(JSON.stringify(e.target))
+
         handleSearch(e);
     }
     );
