@@ -446,6 +446,11 @@ async function displayCharactersInListViewPopup() {
             document.getElementById('pageNumber').value = 1;
         }
 
+        // if page below 0, set to 1
+        if (page < 1) {
+            page = 1;
+            document.getElementById('pageNumber').value = 1;
+
         executeCharacterSearchDebounced({
             searchTerm,
             includeTags,
