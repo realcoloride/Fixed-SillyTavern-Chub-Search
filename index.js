@@ -450,7 +450,8 @@ async function displayCharactersInListViewPopup() {
         if (page < 1) {
             page = 1;
             document.getElementById('pageNumber').value = 1;
-
+        }
+        
         executeCharacterSearchDebounced({
             searchTerm,
             includeTags,
