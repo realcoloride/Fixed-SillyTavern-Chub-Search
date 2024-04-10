@@ -10,9 +10,9 @@ This fork contains a fixed version of the plugin with the fixed domain as it use
 
 ## Installation and Usage
 
-Utilize SillyTavern's third party extension importer to install.
+Use SillyTavern's third party extension importer to install.
 
-![image](https://github.com/city-unit/st-auto-tagger/assets/1860540/188b8ba5-c121-4357-96f8-a45bd60cf8a5)
+![image](https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/assets/108619637/27810b93-5cda-40dd-a673-8cb9eccbad23)
 
 To use the search, click the thunderbolt icon.
 
