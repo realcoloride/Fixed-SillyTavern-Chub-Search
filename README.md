@@ -35,4 +35,4 @@ If you encounter any issues while using this extension, please file an issue on 
 
 ## License
 
-SillyTavern Chub Search is available under the [MIT License](https://github.com/city-unit/st-chub-search/blob/main/LICENSE).
+SillyTavern Chub Search (along with this fixed version) are available under the [MIT License](https://github.com/city-unit/st-chub-search/blob/main/LICENSE).
