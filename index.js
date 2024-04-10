@@ -60,7 +60,7 @@ async function downloadCharacter(input) {
     console.debug('Custom content import started', url);
     let request = null;
     // try /api/content/import first and then /import_custom
-    request = await fetch('/api/content/import', {
+    request = await fetch('/api/content/importUUID', {
         method: 'POST',
         headers: getRequestHeaders(),
         body: JSON.stringify({ url }),
