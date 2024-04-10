@@ -1,6 +1,11 @@
-# SillyTavern Chub Search
+# Fixed SillyTavern Chub Search
 
-SillyTavern Chub Search is an which provides a quick and easy way to search for new cards from [CHUB](https://www.chub.ai/about) from the comfort of your tavern. 
+Fixed SillyTavern Chub Search is a FIX for the SillyTavern Search Chub Search Extension which provides a quick and easy way to search for new cards from [CHUB](https://www.chub.ai/about) from the comfort of your tavern. 
+
+> [!WARNING]
+> ## While Chub is for general purpose character searching, Chub contains a lot of **Not Safe For Work** content, even if NSFW is not ticked.
+> However, if you know what you are doing, please proceed.
+
 
 ![image](https://github.com/city-unit/SillyTavern-Chub-Search/assets/140349364/648e43ae-3ed0-4673-b024-f4ba7846998c)
 
