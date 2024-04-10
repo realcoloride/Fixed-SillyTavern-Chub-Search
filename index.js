@@ -473,8 +473,11 @@ async function displayCharactersInListViewPopup() {
     document.getElementById('pageUpButton').addEventListener('click', function (e) {
         let pageNumber = document.getElementById('pageNumber'); 
 
+        console.log(pageNumber.value + "BEFORE")
         pageNumber.value = parseInt(pageNumber.value) + 1;
         pageNumber.value = Math.max(1, pageNumber.value);
+        console.log(pageNumber.value + "AFTER")
+        console.log(JSON.stringify(e.target))
         handleSearch(e);
     }
     );
