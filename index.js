@@ -441,9 +441,11 @@ async function displayCharactersInListViewPopup() {
 
         // If the page number is not being changed, use page 1
         if (e.target.id !== 'pageNumber' && e.target.id !== 'pageUpButton' && e.target.id !== 'pageDownButton') {
-            page = 1;
+            // this is frustrating
+            
+            // page = 1;
             // set page box to 1
-            document.getElementById('pageNumber').value = 1;
+            // document.getElementById('pageNumber').value = 1;
         }
 
         // if page below 0, set to 1
