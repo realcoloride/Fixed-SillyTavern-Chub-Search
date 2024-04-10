@@ -10,9 +10,13 @@ This fork contains a fixed version of the plugin with the fixed domain as it use
 
 ## Installation and Usage
 
-Use SillyTavern's third party extension importer to install.
+Open up the extensions tab, then click on `Install extension` ![image](https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/assets/108619637/9b875035-3d68-4c31-9d8e-2a3ca7562190) and copy the link of the repository (`https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/`) into the bar and click Save.
 
-![image](https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/assets/108619637/27810b93-5cda-40dd-a673-8cb9eccbad23)
+![image](https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/assets/108619637/941ec0d2-0354-4c4c-b948-14b90e26b5d3)
+
+
+![chrome_bTeVhvhp7x](https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/assets/108619637/d16ae1cb-36b0-4993-9933-56cc545252e2)
+
 
 To use the search, click the thunderbolt icon.
 
