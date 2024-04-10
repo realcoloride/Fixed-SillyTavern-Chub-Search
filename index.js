@@ -133,13 +133,13 @@ function makeTagPermutations(tags) {
  * @param {Array<string>} [options.excludeTags] - A list of tags that the returned characters should not include.
  * @param {boolean} [options.nsfw] - Whether or not to include NSFW characters. Defaults to the extension settings.
  * @param {string} [options.sort] - The criteria by which to sort the characters. Default is by download count.
+ * @param {boolean} [options.asc=false] - Whether to sort in ascending order. Defaults to false [descending].
  * @param {number} [options.page=1] - The page number for pagination. Defaults to 1.
  * @returns {Promise<Array>} - Resolves with an array of character objects that match the search criteria.
  */
-async function fetchCharactersBySearch({ searchTerm, includeTags, excludeTags, nsfw, sort, page=1 }) {
+async function fetchCharactersBySearch({ searchTerm, includeTags, excludeTags, nsfw, sort, page=1, asc = false }) {
 
     let first = extension_settings.chub.findCount;
-    let asc = false;
     let include_forks = true;
     nsfw = nsfw || extension_settings.chub.nsfw;  // Default to extension settings if not provided
     let require_images = false;
@@ -344,6 +344,10 @@ async function displayCharactersInListViewPopup() {
                 <select class="margin0" id="sortOrder">
                 ${Object.keys(readableOptions).map(key => `<option value="${key}">${readableOptions[key]}</option>`).join('')}
                 </select>
+                <div class="flex-container flex-no-wrap flex-align-center">
+                    <label for="asc">Ascending</label>
+                    <input type="checkbox" id="asc">
+                </div>
                 </div>
                 <div class="flex-container flex-no-wrap flex-align-center">
                     <label for="nsfwCheckbox">NSFW:</label>
@@ -433,6 +437,7 @@ async function displayCharactersInListViewPopup() {
         const excludeTags = splitAndTrim(document.getElementById('excludeTags').value);
         const nsfw = document.getElementById('nsfwCheckbox').checked;
         const sort = document.getElementById('sortOrder').value;
+        const asc = document.getElementById('asc').checked;
         let page = document.getElementById('pageNumber').value;
 
         // If the page number is not being changed, use page 1
@@ -448,7 +453,8 @@ async function displayCharactersInListViewPopup() {
             excludeTags,
             nsfw,
             sort,
-            page
+            page,
+            asc
         });
     };
 
@@ -458,6 +464,7 @@ async function displayCharactersInListViewPopup() {
     document.getElementById('includeTags').addEventListener('keyup', handleSearch);
     document.getElementById('excludeTags').addEventListener('keyup', handleSearch);
     document.getElementById('sortOrder').addEventListener('change', handleSearch);
+    document.getElementById('asc').addEventListener('change', handleSearch);
     document.getElementById('nsfwCheckbox').addEventListener('change', handleSearch);
 
     // when the page number is finished being changed, search again
