@@ -4,6 +4,9 @@ SillyTavern Chub Search is an which provides a quick and easy way to search for 
 
 ![image](https://github.com/city-unit/SillyTavern-Chub-Search/assets/140349364/648e43ae-3ed0-4673-b024-f4ba7846998c)
 
+# About the fork
+
+This fork contains a fixed version of the plugin with the fixed domain as it uses an old one, which causes an error.
 
 ## Installation and Usage
 
