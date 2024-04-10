@@ -10,10 +10,7 @@ This fork contains a fixed version of the plugin with the fixed domain as it use
 
 ## Installation and Usage
 
-Open up the extensions tab, then click on `Install extension` ![image](https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/assets/108619637/9b875035-3d68-4c31-9d8e-2a3ca7562190) and copy the link of the repository (`https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/`) into the bar and click Save.
-
-![image](https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/assets/108619637/941ec0d2-0354-4c4c-b948-14b90e26b5d3)
-
+Open up the extensions tab ![image](https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/assets/108619637/9b875035-3d68-4c31-9d8e-2a3ca7562190), then click on `Install extension` ![image](https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/assets/108619637/941ec0d2-0354-4c4c-b948-14b90e26b5d3) and copy the link of the repository (`https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/`) into the bar and click Save.
 
 ![chrome_bTeVhvhp7x](https://github.com/realcoloride/Fixed-SillyTavern-Chub-Search/assets/108619637/d16ae1cb-36b0-4993-9933-56cc545252e2)
 
