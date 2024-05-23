@@ -60,7 +60,7 @@ async function downloadCharacter(input) {
     console.debug('Custom content import started', url);
     let request = null;
     // try /api/content/import first and then /import_custom
-    request = await fetch('/api/content/import', {
+    request = await fetch('/api/content/importUUID', {
         method: 'POST',
         headers: getRequestHeaders(),
         body: JSON.stringify({ url }),
@@ -267,6 +267,10 @@ function generateCharacterListItem(character, index) {
     `;
 }
 
+// good ol' clamping
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+}
 
 /**
  * Displays a popup for character listings based on certain criteria. The popup provides a UI for 
@@ -444,9 +448,15 @@ async function displayCharactersInListViewPopup() {
         if (e.target.id !== 'pageNumber' && e.target.id !== 'pageUpButton' && e.target.id !== 'pageDownButton' && e.target !== "fas fa-chevron-left" && e.target !== "fas fa-chevron-right") {
             page = 1;
             // set page box to 1
-            document.getElementById('pageNumber').value = 1;
+            // document.getElementById('pageNumber').value = 1;
         }
 
+        // if page below 0, set to 1
+        if (page < 1) {
+            page = 1;
+            document.getElementById('pageNumber').value = 1;
+        }
+        
         executeCharacterSearchDebounced({
             searchTerm,
             includeTags,
@@ -473,16 +483,17 @@ async function displayCharactersInListViewPopup() {
     document.getElementById('pageUpButton').addEventListener('click', function (e) {
         let pageNumber = document.getElementById('pageNumber'); 
 
-        pageNumber.value = parseInt(pageNumber.value) + 1;
-        pageNumber.value = Math.max(1, pageNumber.value);
 
+        pageNumber.value = clamp(parseInt(pageNumber.value) + 1, 0, Number.MAX_SAFE_INTEGER);
+        //pageNumber.value = Math.max(1, pageNumber.value);
         handleSearch(e);
     }
     );
     document.getElementById('pageDownButton').addEventListener('click', function (e) {
         let pageNumber = document.getElementById('pageNumber');
-        pageNumber.value = parseInt(pageNumber.value) - 1;
-        pageNumber.value = Math.max(1, pageNumber.value);
+        pageNumber.value = clamp(parseInt(pageNumber.value) - 1, 0, Number.MAX_SAFE_INTEGER);
+        //pageNumber.value = Math.max(1, pageNumber.value);
+        
         handleSearch(e);
     }
     );
